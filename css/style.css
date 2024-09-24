@@ -1,0 +1,269 @@
+/* General styling */
+*{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0%;
+}
+
+/* Jumbotron */
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  background-color: #715151;
+  text-align: center;
+  padding-bottom: 20px;
+  h3{
+      font-size: 1.5rem;
+      margin-bottom: 7px;
+  }
+  p{
+      display: inline;
+      font-size: 0.7em;
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: #9b7878;
+  padding: 1% 0%;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  font-size: 0.8em;
+}
+
+.navbar ul li {
+  margin: 0 0.6%;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar ul li::after {
+  content: "|";
+  color: black;
+  margin-left: 1em;
+}
+
+.navbar ul li:last-child::after {
+  content: "";
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main and Aside layout */
+.container {
+  display: flex;
+  align-items: flex-start;
+  margin: 2%;
+}
+
+/* Main */
+main {
+  flex: 2;
+  margin: 1%;
+}
+
+main > article {
+  padding: 5%;
+  background-color: #e3d7d7;
+  margin-bottom: 4%;
+  margin-right: 3%;
+
+  p {
+    text-align: justify;
+  }
+
+  ul > li {
+    text-align: justify;
+  }
+}
+
+/* Aside */
+aside {
+  position: sticky;
+  top: 10%;
+  z-index: 800;
+  padding: 2% 1%;
+  background-color: #e3d7d7;
+  margin-top: 1%;
+  font-size: 14px;
+}
+
+aside img {
+  display: flex;
+  margin: auto;
+  max-width: 150px;
+}
+
+aside table {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: #9b7878;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-media ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px; 
+}
+
+.social-media ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+  font-size: 24px;
+  width: 60px;  
+  height: 60px;
+}
+
+.theme-toggle:hover {
+  background-color: #636363;
+}
+
+/* Dark Mode Style */
+*.dark-mode {
+  color: #ffffff;
+}
+
+body.dark-mode {
+  background-color: #444;
+}
+
+body.dark-mode .jumbotron {
+  background-color: #111;
+}
+
+body.dark-mode .navbar {
+  background-color: #222;
+}
+
+.dark-mode .navbar ul li a {
+  color: white;
+}
+
+body.dark-mode main > article {
+  background-color: #333;
+}
+
+body.dark-mode aside {
+  background-color: #333;
+}
+
+body.dark-mode footer {
+  background-color: #222;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #ffffff;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #636363;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    align-items: center;
+    padding: 2%;
+    flex-direction: column;
+    li {
+      padding: 3px;
+    }
+  }
+
+  .navbar ul li::after {
+    content: "";
+  }
+
+  .navbar {
+    background-color: #9b7878;
+    padding: 1% 0%;
+  }
+  
+  .sticky {
+    position: static;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2%;
+  }
+
+  main {
+    flex: 3;
+    margin: 1%;
+  }
+  
+  main > article {
+    background-color: #e3d7d7;
+    padding: 5%;
+    margin-bottom: 3%;
+    margin-right: 0%;
+    p {
+      font-size: 12px;
+    }
+
+    ul > li {
+      font-size: 12px;
+      text-align: justify;
+    }
+  }
+
+  aside {
+    margin: 1%;
+    position: flex;
+    width: 96%;
+    background-color: #e3d7d7;
+    font-size: 14px;
+  }
+
+  .social-media ul li{
+    font-size: 10px;
+  }
+}
